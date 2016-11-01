@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Actor Model</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black-future.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="assets/hack_your_career.jpg">
+				</section>
+				<section data-background="assets/hack_your_career.jpg" data-state="dim-animation" data-background-transition="none">
+    				<h1>Actor Model</h1>
+    				by
+    				Łukasz Szymik, November 2016<br>
+    				<small><a href="https://github.com/lszymik">github.com/lszymik</a> &bull; <a href="https://twitter.com/lszymik">@lszymik</a></small>
+				</section>
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h2>Agenda</h2>
+					<p>Actor model</p>
+					<p>Examples</p>
+					<p>Usage</p>
+				</section>
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<section data-background="assets/hacking_pattern_background.jpg">
+						<h2>Use multiple threads</h2>
+						<p class="fragment">You will get results faster!</p>
+					</section>
+					<section data-background="assets/hacking_pattern_background.jpg">
+ 							<img data-src="assets/bullshit_girl.jpg">
+					</section>
+				</section>
+				<!-- Short introduction to Actor model -->
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h2>Actor Model</h2>
+					<p class="fragment">All physically possible computation can be directly implemented in Actors</p>
+					<p class="fragment">Actor model is mathematical model</p>
+					<p class="fragment">Created by Carl Hewitt - 1973</p>
+					<p class="fragment">Inspired by physics</p>
+				</section>
+				<!-- Introduction of the actor-->
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h2>Actor</h2>
+					<img data-src="assets/actor_with_glasses.png"></img>
+				</section>
+				<!-- Actor and his duty -->
+				<section data-background="assets/actor-bacground.jpg">
+					<p class="fragment">Send message to other actors</p>
+					<p class="fragment">Create a new actor</p>
+					<p class="fragment">Designate the behavior to be used for the next message</p>
+				</section>
+				<section data-background="assets/actor-bacground.jpg">
+				  <h2>Actor has</h2>
+					<p class="fragment">Reference</p>
+					<p class="fragment">State</p>
+					<p class="fragment">Behaviour</p>
+					<p class="fragment">Mailbox</p>
+					<p class="fragment">Children</p>
+				</section>
+				<!-- Actor System -->
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h2>One actor is no actor</h2>
+				</section>
+				<section data-background="assets/actor_system.jpg">
+				</section>
+				<section data-background="assets/hacking_pattern_background.jpg">
+				  <h2>Actor Model</h2>
+					<p class="fragment">Reference</p>
+					<p class="fragment">State</p>
+					<p class="fragment">Behaviour</p>
+					<p class="fragment">Mailbox</p>
+					<p class="fragment">Children</p>
+				</section>
+
+				<!-- Summary -->
+			  <section data-background="assets/hacking_pattern_background.jpg">
+					<h2>Summary</h2>
+			  	<span class="attribution">Attribution Text</span>
+					<p class="fragment" class="attribution">Attribution Text</p>
+					<p class="fragment">Summary 2</p>
+					<p class="fragment">Summary 3</p>
+				</section>
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h1>Thank you, questions?</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				progress: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

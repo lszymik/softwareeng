@@ -1,0 +1,117 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #222;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 38px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+///$heading1Size: 2.5em;
+$heading1Size: 2em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal h1 {
+  background-image: #C02425; /* fallback for old browsers */
+  background-image: -webkit-linear-gradient(to bottom, #C02425 , #F0CB35, #C02425); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to bottom, #C02425 , #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;  
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: silver;
+}
+
+mark {
+    //background-color: rgba(202, 201, 208, 0.34);
+    //background-color: rgba(200, 113, 185, 0.90);
+    //background-color: rgba(235, 243, 15, 1);
+    //background-color: rgba(128, 158, 155, 0.9);
+    //background-color: rgba(207, 255, 250, 0.9);
+    //background-color: rgba(255, 5, 42, 1);
+    //background-color: rgba(247, 232, 229, 0.98);
+    //background-color: rgba(239, 88, 93, 1);
+    background-color:: rgba(251, 242, 255, 1);
+}
+
+$tintFrom: blur(0px) saturate(1.0) brightness(1.0);
+$tint: blur(4px) saturate(0.5) brightness(0.3);
+
+@-webkit-keyframes blur-animation {
+  0% {
+    -webkit-filter: $tintFrom; 
+    -moz-filter: $tintFrom;
+    -o-filter: $tintFrom;
+    -ms-filter: $tintFrom;
+    filter: $tintFrom;
+
+  }
+  100% {
+    -webkit-filter: $tint;
+    -moz-filter: $tint;
+    -o-filter: $tint;
+    -ms-filter: $tint;
+    filter: $tint;
+  }
+}
+
+html.dim-animation .backgrounds {
+   -webkit-animation-name: blur-animation;
+   -webkit-animation-duration: 700ms;
+   -webkit-animation-iteration-count: 1;
+   -webkit-animation-direction: alternate;
+   -webkit-animation-timing-function: ease-out;
+   -webkit-animation-fill-mode: forwards;
+   -webkit-animation-delay: 0s;
+}
+
+.red {
+  color: #ff2c2d
+}
+
+.blue {
+  color: #1b91ff
+}
+
+.green {
+  color: #17ff2e
+}
+
