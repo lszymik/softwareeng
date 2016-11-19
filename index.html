@@ -24,9 +24,9 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background="assets/hack_your_career.jpg">
+				<section data-background="assets/spreadit.jpg">
 				</section>
-				<section data-background="assets/hack_your_career.jpg" data-state="dim-animation" data-background-transition="none">
+				<section data-background="assets/spreadit.jpg" data-state="dim-animation" data-background-transition="none">
     				<h1>Actor Model</h1>
     				by
     				Łukasz Szymik, November 2016<br>
@@ -35,8 +35,8 @@
 				<section data-background="assets/hacking_pattern_background.jpg">
 					<h2>Agenda</h2>
 					<p>Actor model</p>
-					<p>Examples</p>
-					<p>Usage</p>
+					<p>Example use cases</p>
+					<p>Summary</p>
 				</section>
 				<section data-background="assets/hacking_pattern_background.jpg">
 					<section data-background="assets/hacking_pattern_background.jpg">
@@ -73,6 +73,14 @@
 					<p class="fragment">Designate the behavior to be used for the next message</p>
 				</section>
 				<section data-background="assets/actor-bacground.jpg">
+				  <h2>Features</h2>
+					<p>No shared state</p>
+					<p>Lightweight processes</p>
+					<p>Asynchronous message-passing</p>
+					<p>Mailboxes to buffer incoming messages</p>
+					<p>Mailbox processing with pattern matching</p>
+				</section>
+				<section data-background="assets/actor-bacground.jpg">
 				  <h2>Actor has</h2>
 					<p>Reference</p>
 					<p>State</p>
@@ -94,6 +102,7 @@
 					<p>Shared facilities</p>
 					<p>like: configuration, logging</p>
 				</section>
+
 				<!-- Message -->
 				<section data-background="assets/hacking_pattern_background.jpg">
 					<img data-src="assets/message.png"/>
@@ -103,6 +112,72 @@
 				<section data-background="assets/hacking_pattern_background.jpg">
 					<img data-src="assets/sending_messages.png"/>
 				</section>
+
+				<!-- Implementations -->
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h2>Implementations</h2>
+					<p>Erlang</p>
+					<p>Akka (Java, Scala)</p>
+					<p>Akka.NET</p>
+					<p>Several libraries for: Objective-C, Python, C++, ...</p>
+					<p>JavaScript</p>
+				</section>
+
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h2>Powerful extensions</h2>
+					<p>Persistence</p>
+					<p>Clusters</p>
+				</section>
+
+				<!-- Example actor-->
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<pre><code class="hljs" data-trim data-noescape>
+class HelloActor extends Actor with ActorLogging {
+
+  override def receive: Receive = {
+    case SayHello(message) ⇒
+		log.info(message)
+		sender() ! Done
+	}
+}
+					</code></pre>
+				</section>
+
+				<!-- JMS vs. Actors-->
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h2>JMS vs. Actors</h2>
+					<img data-src="assets/box.jpg"></img>
+				</section>
+
+				<!-- Zastosowanie -->
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h2>Applications</h2>
+					<p class="fragment">Microservices</p>
+					<p class="fragment">Persistence</p>
+					<p class="fragment">Search</p>
+					<p class="fragment">Several internal services</p>
+					<p class="fragment">Using Akka HTTP or Spray</p>
+				</section>
+
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<h2>Applications</h2>
+					<p class="fragment">Reactive Streams</p>
+					<p class="fragment">Akka Streams</p>
+					<p class="fragment">Data migration</p>
+					<p class="fragment">Automatic indexing</p>
+					<p class="fragment">Maintaining storages</p>
+				</section>
+
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<section data-background="assets/hacking_pattern_background.jpg">
+						<h2>Should we always use actors?</h2>
+						<img data-src="assets/question.jpg"></img>
+					</section>
+					<section data-background="assets/hacking_pattern_background.jpg">
+ 							<img data-src="assets/bullshit.png">
+					</section>
+				</section>
+
 				<!-- Summary -->
 			  <section data-background="assets/hacking_pattern_background.jpg">
 					<h2>Summary</h2>
