@@ -47,7 +47,40 @@
 				</section>
 				<section data-background="assets/hacking_pattern_background.jpg">
 					<section data-background="assets/hacking_pattern_background.jpg">
-						<h2>Software Engineering</h2>
+						<h2>Hack Your Career</h2>
+					</section>
+					<section data-background="assets/hacking_pattern_background.jpg">
+						<img data-src="assets/hack1.png">
+				    </section>
+				    <section data-background="assets/hacking_pattern_background.jpg">
+						<img data-src="assets/hack2.png">
+					</section>
+					<section data-background="assets/hacking_pattern_background.jpg">
+						<img data-src="assets/hack3.png">
+					</section>
+					<section data-background="assets/hacking_pattern_background.jpg">
+						<img data-src="assets/hack4.png">
+					</section>
+					<section data-background="assets/hacking_pattern_background.jpg">
+						<img data-src="assets/hack5.png">
+				    </section>
+				</section>
+				<section data-background="assets/hacking_pattern_background.jpg">
+					<section data-background="assets/hacking_pattern_background.jpg">
+						<h2>Computer Science</h2>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						``` go
+						package main
+
+						import "fmt"
+						
+						func main() {
+							fmt.Println("hello world")
+						}
+						```
+						</script>
 					</section>
 					<section data-background="assets/hacking_pattern_background.jpg">
  						<img data-src="assets/rocket.jpg">
@@ -55,138 +88,52 @@
 					<section data-background="assets/hacking_pattern_background.jpg">
 						<iframe width="800" height="600" src="https://www.youtube.com/embed/pXzKfhTkc4o" frameborder="0" allowfullscreen></iframe>
 					</section>
-				</section>
-				<!-- Short introduction to Actor model -->
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<h2>Actor Model</h2>
-					<p class="fragment">Created by Carl Hewitt - 1973</p>
-					<p class="fragment">Actor model is mathematical model</p>
-					<p class="fragment">Inspired by physics</p>
-					<p class="fragment">All physically possible computation can be directly implemented in Actors</p>
-				</section>
-				<!-- Introduction of the actor-->
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<h2>Actor</h2>
-					<img data-src="assets/actor_with_glasses.png"></img>
-				</section>
-				<!-- Actor and his duty -->
-				<section data-background="assets/actor-bacground.jpg">
-					<p class="fragment">Send message to other actors</p>
-					<p class="fragment">Create a new actor</p>
-					<p class="fragment">Designate the behavior to be used for the next message</p>
-				</section>
-				<section data-background="assets/actor-bacground.jpg">
-				  <h2>Features</h2>
-					<p>No shared state</p>
-					<p>Lightweight processes</p>
-					<p>Asynchronous message-passing</p>
-					<p>Mailboxes to buffer incoming messages</p>
-					<p>Mailbox processing with pattern matching</p>
-				</section>
-				<section data-background="assets/actor-bacground.jpg">
-				  <h2>Actor has</h2>
-					<p>Reference</p>
-					<p>State</p>
-					<p>Behaviour</p>
-					<p>Mailbox</p>
-					<p>Children</p>
-				</section>
-				<!-- Actor System -->
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<h2>One actor is no actor</h2>
-					<p class="fragment">They come in system</p>
-				</section>
-				<section data-background="assets/actor_system.jpg">
-				</section>
-				<section data-background="assets/hacking_pattern_background.jpg">
-				  <h2>Actor System</h2>
-					<p>Container</p>
-					<p>Heavyweight</p>
-					<p>Shared facilities</p>
-					<p>like: configuration, logging</p>
-				</section>
-
-				<!-- Message -->
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<img data-src="assets/message.png"/>
-				</section>
-
-				<!-- Actor Messages -->
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<img data-src="assets/sending_messages.png"/>
-				</section>
-
-				<!-- Implementations -->
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<h2>Implementations</h2>
-					<p>Erlang</p>
-					<p>Akka (Java, Scala)</p>
-					<p>Akka.NET</p>
-					<p>Several libraries for: Objective-C, Python, C++, ...</p>
-					<p>JavaScript</p>
-				</section>
-
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<h2>Powerful extensions</h2>
-					<p>Persistence</p>
-					<p>Clusters</p>
-				</section>
-
-				<!-- Example actor-->
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<pre><code class="hljs" data-trim data-noescape>
-class HelloActor extends Actor with ActorLogging {
-
-  override def receive: Receive = {
-    case SayHello(message) ⇒
-		log.info(message)
-		sender() ! Done
-	}
-}
-					</code></pre>
-				</section>
-
-				<!-- JMS vs. Actors-->
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<h2>JMS vs. Actors</h2>
-					<img data-src="assets/box.jpg"></img>
-				</section>
-
-				<!-- Zastosowanie -->
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<h2>Applications</h2>
-					<p class="fragment">Microservices</p>
-					<p class="fragment">Persistence</p>
-					<p class="fragment">Search</p>
-					<p class="fragment">Several internal services</p>
-					<p class="fragment">Using Akka HTTP or Spray</p>
-				</section>
-
-				<section data-background="assets/hacking_pattern_background.jpg">
-					<h2>Applications</h2>
-					<p class="fragment">Reactive Streams</p>
-					<p class="fragment">Akka Streams</p>
-					<p class="fragment">Data migration</p>
-					<p class="fragment">Automatic indexing</p>
-					<p class="fragment">Maintaining storages</p>
-				</section>
-
-				<section data-background="assets/hacking_pattern_background.jpg">
 					<section data-background="assets/hacking_pattern_background.jpg">
-						<h2>Should we always use actors?</h2>
-						<img data-src="assets/question.jpg"></img>
-					</section>
-					<section data-background="assets/hacking_pattern_background.jpg">
- 							<img data-src="assets/bullshit.png">
+						<h2>Software Engineering</h2>
 					</section>
 				</section>
-
-				<!-- Summary -->
-			  <section data-background="assets/hacking_pattern_background.jpg">
-					<h2>Summary</h2>
-					<p>Very efficient model</p>
-					<p>Available on multiple platforms</p>
-					<p>Easy to use and powerful</p>
+				<section>
+					<section data-background="assets/hacking_pattern_background.jpg">
+						<h2>Software Engineering</h2>
+					</section>
+					<section>
+						<h2>Application of engineering to the development of software</h2>
+					</section>
+					<section>
+						<h2>Requirements, Implementation, Test, Deployment, Maitanance</h2>
+					</section>
+				</section>
+				<section>
+					<section data-background="assets/hacking_pattern_background.jpg">
+						<h2>Software Engineering Phases</h2>
+					</section>
+					<section>
+						<h2>Requirements</h2>
+					</section>
+					<section>
+						<img data-src="assets/requirements.jpg"/>
+					</section>
+					<section>
+						<img data-src="assets/okna.jpg"/>
+					</section>
+					<section>
+						<img data-src="assets/welldone.gif"/>
+					</section>
+					<section>
+						<h2>Desing</h2>
+					</section>
+					<section>
+						<img data-src="assets/architecture.png"/>
+					</section>
+					<section>
+						<h2>Implementation</h2>
+					</section>
+					<section>
+						<h2>Integration & Test</h2>
+					</section>
+					<section>
+						<h2>Maitanance</h2>
+					</section>
 				</section>
 				<section data-background="assets/hacking_pattern_background.jpg">
 					<h1>Thank you, questions?</h1>

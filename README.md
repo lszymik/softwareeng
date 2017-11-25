@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Presentation of Actor Model performed during [Hack Your Career events](www.facebook.com/Hack.your.Career)
+Presentation of Software Engineering performed during [Hack Your Career events](www.facebook.com/Hack.your.Career)
 
 ## Setup
 
@@ -12,12 +12,12 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
 
 1. Clone the reveal.js repository
    ```sh
-   $ git clone https://github.com/lszymik/actormodel
+   $ git clone https://github.com/lszymik/softwareeng
    ```
 
 1. Navigate to the actormodel folder
    ```sh
-   $ cd actormodel
+   $ cd softwareeng
    ```
 
 1. Install dependencies
@@ -34,7 +34,3 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
 
    You can change the port by using `npm start -- --port 8001`.
 
-
-## Examples
-
-You can check out examples located here [examples](https://github.com/lszymik/akkaexamples)
